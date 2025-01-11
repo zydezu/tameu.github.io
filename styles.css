@@ -113,7 +113,7 @@ a {
 }
 
 .NavBar li:hover {
-  backdrop-filter: blur(30px);
+  backdrop-filter: brightness(2);
 }
 
 .NavBarButton:hover {
