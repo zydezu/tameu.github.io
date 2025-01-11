@@ -108,12 +108,18 @@ a {
 
 .NavBar li {
   float: left;
-  padding: 22.5px 2.5vw;
+  padding: 22.5px 1.5vw;
   cursor: pointer;
 }
 
 .NavBar li:hover {
   backdrop-filter: blur(30px);
+}
+
+.NavBarButton:hover {
+  text-decoration: underline;
+  text-decoration-color: #a4ef86;
+  text-decoration-thickness: 3px;
 }
 
 .NavBarButton {
