@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UniSim - Backlogged</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="NavBar">
+      <!--Text that goes to home screen when clicked-->
+      <a class="LogoNavBar" href="index.html#TopOfPage"><img class="LogoImg"
+          src="images/backlogged_no_title_no_background.png" alt=""></a>
+      <h1 class="NavBarTitle">UniverCity</h1>
+      <ul class="NavBarList">
+        <!--Options that form the navigation bar-->
+        <li><a class="NavBarButton" href="index.html">HOME</a></li>
+        <li><a class="NavBarButton" href="download.html">DOWNLOAD</a></li>
+        <li><a class="NavBarButtonCurrent" href="documentation.html">DOCUMENTATION</a></li>
+        <!-- === CONTENT THAT CHANGES DEPENDENT ON LOGIN STATUS === -->
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <main class="MainContent">
+    <section class="OpeningContent" id="OpeningContent">
+      <!-- Used as an anchor so the back to top button works-->
+      <a id="TopOfPage"></a>
+      <div class="header">
+        <img src="images/backlogged_no_bg.png" alt="Backlogged logo">
+        <h1 class="MainTextLogo">
+          <span>BackLogged</span>
+          <span>UniSim - Cohort 3 Group 10</span>
+        </h1>
+      </div>
+      <div class="BackgroundImage" id="BackgroundImage">
+        <div class="backgroundGrad"></div>
+        <img class="backgroundImage" src="images/mapBackgroundBlur.png" alt="UniSim background">
+      </div>
+      <div class="main-section">
+        <div class="documentation">
+          <h1>Documentation</h1>
+
+          <p>
+            <a href="documents/Documentation/Req1.pdf" download>Req1.pdf</a>
+          </p>
+
+          <p>
+            <a href="documents/Documentation/Arch1.pdf" download>Arch1.pdf</a>
+          </p>
+
+          <p>
+            <a href="documents/Documentation/Plan1.pdf" download>Plan1.pdf</a>
+
+          <p>
+            <a href="documents/Documentation/Risk1.pdf" download>Risk1.pdf</a>
+          </p>
+
+          <p>
+            <a href="documents/Documentation/Impl1.pdf" download>Impl1.pdf</a>
+          </p>
+          </details>
+        </div>
+        <div class="classDiagram">
+          <h2>Class Diagrams</h2>
+          <details>
+            <summary>
+              Final Version
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramFinal.png" alt="Final Version">
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Version 1
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV1.png" alt="Version 1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Version 2
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV2.png" alt="Version 2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Version 3
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV3.png" alt="Version 3">
+            </p>
+          </details>
+
+
+        </div>
+
+        <div class="componentDiagrams">
+          <h2>Component Diagrams</h2>
+          <details>
+            <summary>
+              Component Diagram
+            </summary>
+            <p>
+              <img src="documents/ComponentDiagrams/ComponentDiagrams.jpg" alt="Version 1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Component Diagram UML code
+            </summary>
+            <p>
+              <code>
+                <pre>
+@startuml
+package "User Interface" as ui {
+  [TitleScreen] as ts
+  [MapScreen] as ms
+  [SettingsScreen] as ss
+  [GameOverScreen] as go
+}
+package "Persistent Objects" as po {
+  [Soundtrack] as st
+  [GamePreferences] as gp
+  [Constants] as cs
+  [InGameTimer] as it
+}
+package "Buildings" as bd {
+  [BuildingManager] as bm
+  [BuildingRenderer] as br
+  [BuildingFactory] as bf
+  [BuildingPlacementManager] as bp
+}
+interface "Preferences profile" as pp
+interface "Soundtrack file" as sf    
+ui ..> gp : get preferences
+ss ..> gp : set preferences
+st ..> gp : get volume
+gp --> pp : load/store
+ui ..> st : play
+go ..> st : pause
+ms ..> it : update time
+ui ..> cs : get constants
+ms ..> bm : choose buildings
+ms ..> br : render buildings
+st --> sf : stream
+bm ..> bp : place buildings
+bm ..> bf : create buildings
+br ..> bp : get placed buildings
+@enduml
+                </pre>
+              </code>
+            </p>
+          </details>
+
+        </div>
+
+        <div class="conceptArt">
+          <h2>Concept Art</h2>
+          <details>
+            <summary>
+              Logo Ideas
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoIdeas.jpg" alt="Logo Ideas">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Logo V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoV1.jpg" alt="Logo V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Logo V2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoV2.png" alt="Logo V2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Map V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/MapV1.jpg" alt="Map V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Map V2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/MapV2.png" alt="Map V2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Title Screen V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/TitleScreenV1.jpg" alt="Title Screen V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              TitleScreenV2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/TitleScreenV2.png" alt="Title Screen V2">
+            </p>
+          </details>
+
+        </div>
+
+        <div class="Gantt Diagrams">
+          <h2>Gantt Diagrams</h2>
+          <details>
+            <summary>
+              Gantt Diagram
+            </summary>
+            <p>
+              <img src="documents/GanttDiagrams/GanttDiagram.png" alt="Gantt Diagram">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Gantt Diagram UML code
+            </summary>
+            <p>
+              <code>
+                <pre>
+@startgantt
+
+Project starts 2024-10-03
+
+-- Risk assessment --
+
+[Risk Assessment] as [a0] requires 14 days and is coloured in Coral
+
+-- Requirements --
+
+[Requirements elicitation] as [r0] requires 14 days and is coloured in Green
+
+[Questions write up] as [r1]  requires 3 days and is coloured in GreenYellow
+
+[Client interview] as [r2] requires 1 day and is coloured in GreenYellow
+
+[User requirements table] as [r3] requires 4 days and is coloured in GreenYellow
+
+[System requirements table] as [r4] requires 4 days and is coloured in GreenYellow
+
+[Additional client consultations] as [r5] requires 1 day and is coloured in GreenYellow
+
+[Final requirements table] as [r6] requires 1 day and is coloured in GreenYellow
+
+-- Method Selection and Planning --
+
+[Method Selection and Planning] as [m0] requires 7 days and starts D+14 and is coloured in MediumOrchid
+
+-- Implementation --
+
+[Prototype development] as [i0] requires 18 days and starts D+14 and is coloured in SteelBlue
+
+[UI Design] as [i1] requires 10 days and starts D+14 and is coloured in LightBlue
+
+[Game logic design] as [i2] requires 5 days and starts D+16 and is coloured in LightBlue
+
+[Prototype design] as [i3] requires 8 days and starts at [i2]'s end and is coloured in LightBlue
+
+[Prototype testing] as [i4] requires 2 days and starts at [i3]'s end and is coloured in LightBlue
+
+[Final prototype] happens on 2024-11-03
+
+[r1] starts at [r0]'s start
+
+[r2] starts at [r1]'s end
+
+[r3] starts at [r2]'s end
+
+[r4] starts at [r3]'s end
+
+[r5] starts at [r4]'s end
+
+[r6] starts at [r5]'s end
+
+@endgantt
+                </pre>
+              </code>
+            </p>
+          </details>
+        </div>
+
+        <div class="MeetingNotes">
+          <h2>Meeting Notes</h2>
+          <details>
+            <summary>
+              Meeting Notes
+            </summary>
+            <p>
+              <a href="documents/MeetingNotes/Meeting notes.pdf" download>Meeting Notes.pdf</a>
+            </p>
+          </details>
+
+        </div>
+
+        <div class="SequenceDiagrams">
+          <h2>Sequence Diagrams</h2>
+          <details>
+            <summary>
+              Sequence Diagram
+            </summary>
+            <p>
+              <img src="documents/SequenceDiagrams/SequenceDiagrams.jpg" alt="Sequence Diagram">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Sequence Diagram UML code
+            </summary>
+            <p>
+              <code>
+                <pre>
+@startuml
+!pragma teoz true
+actor User
+participant Main
+participant TitleScreen
+participant MapScreen
+participant SettingsScreen
+participant GameOverScreen
+participant BuildingManager
+participant InGameTimer
+participant GamePreferences
+participant Soundtrack
+User -> Main: start game
+activate Main
+activate Soundtrack
+activate InGameTimer
+activate GamePreferences
+Main -> Soundtrack : play()
+Soundtrack <-> GamePreferences : getMusicVolume()
+Soundtrack -> User : play soundtrack
+Main -> TitleScreen : new TitleScreen()
+activate TitleScreen
+TitleScreen -> User : show()
+User -> TitleScreen : Play
+activate MapScreen
+& TitleScreen -> MapScreen : new MapScreen()
+& MapScreen -> BuildingManager : new BuildingManager()
+activate BuildingManager
+deactivate TitleScreen
+MapScreen -> User : show()
+User -> MapScreen : Pause
+& MapScreen -> InGameTimer : userStopTime()
+MapScreen -> MapScreen : change Pause icon to Resume icon
+User -> MapScreen : choose building
+& MapScreen -> BuildingManager : tryPlaceBuilding()
+BuildingManager -> User : location choice mode
+User -> BuildingManager : choose location
+BuildingManager -> User : render building
+User -> MapScreen : Resume
+& MapScreen -> InGameTimer : userStartTime()
+MapScreen -> MapScreen : change Resume icon to Pause icon
+User -> MapScreen : Settings
+& MapScreen -> InGameTimer :  systemStopTime()
+MapScreen -> SettingsScreen : new SettingsScreen()
+activate SettingsScreen
+SettingsScreen -> User : show()
+User -> SettingsScreen : Change music volume
+& SettingsScreen -> GamePreferences : setMusicVolume()
+SettingsScreen -> Soundtrack: play()
+Soundtrack -> GamePreferences : getMusicVolume()
+Soundtrack -> User : play soundtrack with new volume
+User -> SettingsScreen : Back
+SettingsScreen -> MapScreen : setScreen(previousScreen)
+deactivate SettingsScreen
+...3 minutes later...
+InGameTimer -> MapScreen : time expired
+MapScreen -> GameOverScreen : new GameOverScreen()
+activate GameOverScreen
+deactivate MapScreen
+deactivate BuildingManager
+GameOverScreen -> Soundtrack : pause()
+Soundtrack -> User : pause soundtrack
+GameOverScreen -> User : show()
+User -> GameOverScreen : Quit
+GameOverScreen -> Main : exit()
+deactivate InGameTimer
+deactivate GamePreferences
+deactivate GameOverScreen
+deactivate Soundtrack
+Main -> User : close game
+deactivate Main
+@enduml
+                </pre>
+              </code>
+            </p>
+          </details>
+        </div>
+
+        <div class="StateDiagrams">
+          <h2>State Diagrams</h2>
+          <details>
+            <summary>
+              State Diagram
+            </summary>
+            <p>
+              <img src="documents/StateDiagrams/StateDiagram.jpg" alt="State Diagram">
+            </p>
+          </details>
+          <details>
+            <summary>
+              State Diagram UML code
+            </summary>
+            <p>
+              <code>
+                <pre>
+@startuml
+hide empty description
+[*] --> MainMenu
+MainMenu --> Map : Play button
+MainMenu --> SettingsMenu : Settings button
+MainMenu --> [*] : Quit button
+Map --> PausedMap : Pause button
+Map --> BuildingSelection : choose a building
+Map --> SettingsMenu : Settings button
+Map --> GameOverMenu : timer expired
+SettingsMenu --> SettingsMenu : change settings
+SettingsMenu --> MainMenu : Back button
+SettingsMenu --> Map : Back button
+SettingsMenu --> PausedMap: Back button
+PausedMap --> Map : Resume button
+PausedMap --> BuildingSelection : choose a building
+PausedMap --> SettingsMenu : Settings button
+BuildingSelection --> Map: place a building
+BuildingSelection --> PausedMap : place a building
+GameOverMenu --> Map: Try Again button
+GameOverMenu --> [*]: Exit button
+@enduml
+                </pre>
+              </code>
+            </p>
+          </details>
+        </div>
+
+        <div class="UseCases">
+          <h2>Use Cases</h2>
+          <details>
+            <summary>
+              Use Case
+            </summary>
+            <p>
+              <a href="documents/UseCases/UseCase.pdf" download>Use Cases.pdf</a>
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+</body>
+
+</html>

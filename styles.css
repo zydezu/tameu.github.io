@@ -1,0 +1,241 @@
+:root {
+  --black: #000000;
+  --green: #3f7f25;
+  --dirtBrown: #8f7f7c;
+  --darkBlue: #154e6a;
+  --seaBlue: #2a557f;
+  --pathGrey: #a3a3a3;
+  --lighterGrey: #d1d5cd;
+  --yellow: #fbc85f;
+  --whiteBlue: #c9e7eb;
+  --white: #fff;
+  --pinkHighlight: #ed837a;
+  --pinkHighlightFaded: #ed6ea1ba;
+  --normalBoxShadow: 3px 5px 15px var(--black);
+  --peachGradient: linear-gradient(45deg, #ed6ea0, #ec8c69);
+  --peachGradientFaded: linear-gradient(65deg, #ed6ea1ba, #ec8c69ba);
+  --clickedButtonShadow: 0 0 5px #000000;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--darkBlue);
+}
+
+::-webkit-scrollbar {
+  width: 10px;   
+  
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darkGrey);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: var(--peachGradientFaded);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--peachGradient);
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+
+main , footer {
+  top: 0px;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+/* === NAVIGATION SECTION === */
+
+header {
+  box-sizing: border-box;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff25;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 5px 50px 2px #000000;
+  transition: 0.3s ease;
+}
+
+header .NavBar {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  transition: 0.5s ease-in-out;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: #63b4cf;
+}
+
+.NavBarList {
+  position: relative;
+}
+
+
+
+.NavBar li {
+  float: left;
+  padding: 22.5px 2.5vw;
+  cursor: pointer;
+}
+
+.NavBar li:hover {
+  backdrop-filter: blur(30px);
+}
+
+.NavBarButton {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+}
+
+.NavBarButtonCurrent {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #a4ef86;
+  text-decoration-thickness: 3px;
+}
+
+.NavBarTitle{
+  margin: 5px;
+  position: relative;
+  top: 25%;
+  transform: translateX(15px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+
+}
+
+
+.LogoNavBar {
+  font-size: 1.5rem;
+}
+
+.LogoImg {
+  position: absolute;
+  height: 100%;
+}
+
+
+/* === NAVIGATION SECTION END === */
+
+#TopOfPage {
+  position: absolute;
+  top: 0px;
+}
+
+body {
+  font-family: MainFont;
+  color: white;
+}
+
+.header {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 10vh;
+}
+
+.header img {
+  float: left;
+  width: 20%;
+  height: 20%;
+}
+
+.header h1 {
+  position: relative;
+  left: 2%;
+  margin: auto;
+  margin-left: 0;
+}
+
+.main-section {
+  padding: 2%
+}
+
+h2 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.backgroundImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(40%);
+  
+
+}
+
+
+.main-section {
+  padding: 2%
+}
+
+h2 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+img:not(.backgroundImage) {
+  max-width: 100%;
+}
+
+.documentation {
+  border: 3px dashed white;
+  text-align: center;
+}

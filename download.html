@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UniSim - Backlogged</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="NavBar">
+      <!--Text that goes to home screen when clicked-->
+      <a class="LogoNavBar" href="index.html#TopOfPage"><img class="LogoImg"
+          src="images/backlogged_no_title_no_background.png" alt=""></a>
+      <h1 class="NavBarTitle">UniverCity</h1>
+
+      <ul class="NavBarList">
+        <!--Options that form the navigation bar-->
+        <li><a class="NavBarButton" href="index.html">HOME</a></li>
+        <li><a class="NavBarButtonCurrent" href="download.html">DOWNLOAD</a></li>
+        <li><a class="NavBarButton" href="documentation.html">DOCUMENTATION</a></li>
+        <!-- === CONTENT THAT CHANGES DEPENDENT ON LOGIN STATUS === -->
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <main class="MainContent">
+    <section class="OpeningContent" id="OpeningContent">
+      <!-- Used as an anchor so the back to top button works-->
+      <a id="TopOfPage"></a>
+      <div class="header">
+        <img src="images/backlogged_no_bg.png" alt="Backlogged logo">
+        <h1 class="MainTextLogo">
+          <span>BackLogged</span>
+          <span>UniSim - Cohort 3 Group 10</span>
+        </h1>
+      </div>
+      <div class="BackgroundImage" id="BackgroundImage">
+        <div class="backgroundGrad"></div>
+        <img class="backgroundImage" src="images/mapBackgroundBlur.png" alt="UniSim background">
+      </div>
+      <div class="main-section">
+        <h2>Java Binary</h2>
+        <a id="downloadLink" href="\UniverCity-v*.zip" download>test.jar</a>
+
+        <script>
+          fetch("downloadname.txt")
+            .then((res) => res.text())
+            .then((text) => {
+              document.getElementById("downloadLink").href = `${text}.zip`;
+              document.getElementById("downloadLink").innerHTML = text;
+            })
+            .catch((e) => console.error(e));
+        </script>
+        <p>
+        </p>
+      </div>
+</body>
+
+</html>
